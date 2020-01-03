@@ -107,6 +107,7 @@ public class WebSocketServer {
                     item.sendMessage(message);
                 } else if (item.sid.equals(sid)) {
                     item.sendMessage(message);
+                        break;
                 }
             } catch (IOException e) {
                 continue;

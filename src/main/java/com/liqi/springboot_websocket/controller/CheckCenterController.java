@@ -27,6 +27,13 @@ public class CheckCenterController {
         return mav;
     }
 
+    @GetMapping("/socket2/{cid}")
+    public ModelAndView socket2(@PathVariable String cid) {
+        ModelAndView mav = new ModelAndView("socket2");
+        mav.addObject("cid", cid);
+        return mav;
+    }
+
     //推送数据接口
     @ResponseBody
     @RequestMapping("/socket/push/{cid}")
